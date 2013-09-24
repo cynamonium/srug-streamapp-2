@@ -1,0 +1,19 @@
+common: &common
+  adapter: postgresql
+  username: postgres
+  password: postgres
+  encoding: unicode
+  host: localhost
+  pool: 16
+
+development:
+  <<: *common
+  database: streamer_development
+
+test:
+  <<: *common
+  database: streamer_test
+
+production:
+  <<: *common
+  database: streamer_development
